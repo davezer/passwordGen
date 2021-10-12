@@ -101,10 +101,23 @@ function generatePassword() {
 		else if (confirmSpecial){
 			user = special;
 		};
+	// empty array variable for length
+	var passwordBlank = [];
+
+	for (var i = 0; i < passwordLength; i++){
+		var allChoices = user[Math.floor(Math.random() * user.length)];
+		passwordBlank.push(allChoices);
+	}
+
+	var password = passwordBlank.join("");
+	return password;
+};
+
+	
+	generatePassword();
 
 
 
 
 
 
-}
